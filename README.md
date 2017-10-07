@@ -11,7 +11,7 @@ My personal take on what was an inspiration to become Facebook
 - hobbies: string
 
 
-### Vote (Join Table)
+### Vote
 - win_profile_id
 - lose_profile_id
 

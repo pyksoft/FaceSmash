@@ -1,0 +1,11 @@
+<div class="card" style="width: 20rem;">
+<%= image_tag profile.image.url, class: 'img-fluid', width: 200, class: "card-img-top" %>
+<div class="card-body">
+    <h4 class="card-title"><%= profile.full_name %></h4>
+    <p class="card-text"><%= profile.bio %></p>
+    <p class="card-text"><strong>Job:</strong> <%= profile.job %></p>
+    <p class="card-text"><strong>Hobbies:</strong> <%= profile.hobbies %></p>
+    <%= link_to button_tag('Edit',class:"btn btn-primary"), edit_profile_path(profile) %>
+    <%= link_to button_tag('Delete',class:"btn btn-primary"), profile, method: :delete, data: { confirm: 'Are you sure?' } %>
+</div>
+</div>

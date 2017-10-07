@@ -1,3 +1,14 @@
 @import "bootstrap";
 
 @import "./profiles";
+
+$facebook_blue: #3B5998;
+$white: #FFFFFF;
+
+body {
+    background-color: $facebook_blue;
+}
+
+div.container {
+    background: $white;
+}

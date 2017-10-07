@@ -1,12 +1,10 @@
 <p id="notice"><%= notice %></p>
+<h1>
+  <%= @profile.full_name %>
+</h1>
 
 <p>
   <%= image_tag @profile.image.url, class: 'img-fluid', width: 400 %>
-</p>
-
-<p>
-  <strong>Name:</strong>
-  <%= @profile.full_name %>
 </p>
 
 <p>

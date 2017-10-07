@@ -12,7 +12,7 @@
 
 <p>
   <strong>Image data:</strong>
-  <%= @profile.image_data %>
+  <%= image_tag @profile.image.url, class: 'img-fluid', width: 400 %>
 </p>
 
 <p>

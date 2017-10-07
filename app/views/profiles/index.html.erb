@@ -20,7 +20,7 @@
       <tr>
         <td><%= profile.first_name %></td>
         <td><%= profile.last_name %></td>
-        <td><%= profile.image_data %></td>
+        <td><%= image_tag profile.image.url, class: 'img-fluid', width: 200 %></td>
         <td><%= profile.bio %></td>
         <td><%= profile.job %></td>
         <td><%= profile.hobbies %></td>

@@ -1,24 +1,29 @@
-# README
+# FaceSmash
+My personal take on what was an inspiration to become Facebook
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Model
+### Profile
+- first_name: string
+- last_name: string
+- image_data: string
+- bio: text
+- job: string
+- hobbies: string
 
-Things you may want to cover:
 
-* Ruby version
+### Vote (Join Table)
+- win_profile_id
+- lose_profile_id
 
-* System dependencies
 
-* Configuration
+## Gems
+- Shrine
+- Bootstrap
+- Rspec
+- Annotate
 
-* Database creation
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Features
+### Ability to vote for a Profile
+- If the person is voted, it becomes a Win (win_profile_id)
+- If the person is not voted, it becomes a Loss (lose_profile_id)

@@ -14,7 +14,7 @@ form {
         margin-left: auto;
         margin-right: auto;
         
-        input[type=text], input[type=file] {
+        input[type=text] {
             width: 100%;
             height: 45px;
             padding: 12px; 
@@ -25,6 +25,10 @@ form {
             resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
             font-size: 16px;
             color: black;
+        }
+
+        input[type=file] {
+            margin-bottom: 20px;
         }
     
         textarea {

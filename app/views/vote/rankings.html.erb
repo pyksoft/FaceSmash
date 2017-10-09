@@ -1,0 +1,7 @@
+<h1>Rankings</h1>
+
+<% @rankings.each_with_index do |ranking, index| %>
+    <h2>#<%= index+1 %> <%= ranking[:profile].full_name %> - <%= pluralize(ranking[:points],'point') %></h2>
+<% end %>
+
+<%= link_to 'Back', root_path, class: 'btn btn-primary' %>

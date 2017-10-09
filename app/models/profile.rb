@@ -45,4 +45,14 @@ class Profile < ApplicationRecord
         end
         profile
     end
+
+    # Win Count
+    def win_count
+        Vote.where(winner_id: self.id).count(:winner_id)
+    end
+
+    # Lose Count
+    def lose_count
+        Vote.where(loser_id: self.id).count(:loser_id)
+    end
 end

@@ -1,7 +1,6 @@
 <h1>Facesmash</h1>
 <p>Vote for a Person</p>
 
-
 <div class="row">
     <div class="col-sm-6">
         <%= render @profile_left %>
@@ -24,3 +23,6 @@
         <% end %>
     </div>
 </div>
+
+<br>
+<%= link_to 'View Rankings', vote_rankings_path, class: 'btn btn-success' %>

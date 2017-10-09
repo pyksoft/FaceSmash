@@ -5,10 +5,22 @@
 <div class="row">
     <div class="col-sm-6">
         <%= render @profile_left %>
+        
+        <%= form_with url: vote_create_path, method: :post do |f| %>
+        <%= f.hidden_field :winner_id, value: @profile_left.id %>
+        <%= f.hidden_field :loser_id, value: @profile_right.id %>
+            <%= f.submit "Vote #{@profile_left.first_name}", class: 'btn btn-primary' %>
+        <% end %>
     </div>
 
 
     <div class="col-sm-6">
         <%= render @profile_right %>
+
+        <%= form_with url: vote_create_path, method: :post do |f| %>
+        <%= f.hidden_field :winner_id, value: @profile_right.id %>
+        <%= f.hidden_field :loser_id, value: @profile_left.id %>
+            <%= f.submit "Vote #{@profile_right.first_name}", class: 'btn btn-primary' %>
+        <% end %>
     </div>
 </div>

@@ -37,14 +37,22 @@ class Profile < ApplicationRecord
     }
 
     # Choose two different random profiles
-    def self.choose_two_random_profiles
+    # def self.choose_two_random_profiles
+    #     profile = {}
+    #     profile[:left] = self.random_profile
+    #     while(profile[:left]==profile[:right] || profile[:right].nil? )
+    #         profile[:right] = self.random_profile
+    #     end
+    #     profile
+    # end
+    scope :choose_two_random_profiles, -> {
         profile = {}
         profile[:left] = self.random_profile
         while(profile[:left]==profile[:right] || profile[:right].nil? )
             profile[:right] = self.random_profile
         end
         profile
-    end
+    }
 
     # Win Count
     def win_count
